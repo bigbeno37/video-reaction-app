@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="select-video">Select video</button>
+		<input id="video-input" type="file" style="display: none"/>
+
+		<button id="reaction-data-btn">Select reaction data</button>
+		<input id="file" type="file" style="display: none"/>
+
+		<button id="play">Play</button>
+		<br>
+
+		<video controls style="width: 1280px"></video>
+
+		<script>
+			const videoFileInput = document.querySelector('#video-input');
+			document.querySelector("#select-video").addEventListener('click', () => {
+				videoFileInput.click();
+			});
+
+			videoFileInput.addEventListener('change', ev => {
+				const file = ev.target.files[0];
+				const url = URL.createObjectURL(file);
+
+				document.querySelector("video").src = url;
+			});
+		</script>
+	</body>
+</html>

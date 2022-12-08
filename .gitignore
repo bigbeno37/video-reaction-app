@@ -1,0 +1,7 @@
+playback-extension/dist
+playback-extension/node_modules
+recording-extension/dist
+recording-extension/node_modules
+shared/node_modules
+webapp/node_modules
+.idea/

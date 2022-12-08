@@ -1,0 +1,27 @@
+{
+
+  "manifest_version": 2,
+  "name": "Reaction Playback",
+  "version": "1.0",
+
+  "description": "Adds a red border to all webpages matching mozilla.org.",
+
+  "icons": {
+
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://app.plex.tv/*", "*://localhost/"],
+      "js": ["dist/index.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": true
+  },
+
+  "permissions": ["tabs"]
+
+}

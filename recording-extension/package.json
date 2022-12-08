@@ -1,0 +1,19 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "borderify.js",
+  "scripts": {
+    "build": "tsc && esbuild index.ts --bundle --outfile=dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/file-saver": "^2.0.5",
+    "esbuild": "^0.15.18",
+    "file-saver": "^2.0.5",
+    "obs-websocket-js": "^5.0.2",
+    "safer-ts": "^1.1.0",
+    "typescript": "^4.9.3"
+  }
+}
